@@ -1,0 +1,35 @@
+tasks = []
+
+while True:
+    print("\n---Menu---")
+    print("1. tasks add")
+    print("2. view tasks")
+    print("3. delete tasks")
+    print("4. exit")
+
+    choice = input("choose a number 1,2,3,4: ")
+
+    if choice == '1':
+        work = input("add tasks: ")
+        tasks.append(work)
+        print("task added")
+
+    elif choice == "2":
+        print("\nlist")
+        for t in tasks:
+            print(t)
+
+    elif choice == "3":
+        work = input("remove task name: ")
+        if work in tasks:
+            tasks.remove(work)
+            print("task deleted")
+        else:
+            print("task not found")
+
+    elif choice == "4":
+        print("exit")
+        break
+
+    else:
+        print("error.")
